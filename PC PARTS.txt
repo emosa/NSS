@@ -1,0 +1,44 @@
+CPU = Intel core i7-4790k processor Haswell quad-core 4.0Ghz LGA 1150d Destop Processor
+
+CPU COOLER Enermax 120S clc cooler 
+
+MOTHER BOARD ASRock Z97X KILLER standard ATX
+CHECK CHIPSET ALWAYS
+
+MEMORY G.SKILL Ares Series 16GB (only stores data as long there is power in the system)
+
+STORAGE DRIVES 
+
+CRUCIAL BY 2.5- inch solid state drive (SSD)
+INSTAL OPERATING SYSTEM
+
+MECHANICAL DRIVES
+
+WD BLACK DESKTOP HARD DRIVE 3.0TB 64MB WD3003FZEX 
+
+COPY DATA TO DRIVE AT THE SAME TIME
+
+OPTICAL DRIVE DVD
+
+POWER SUPPLY
+
+EVGA SuperNOVA NEX750B (MODULAR POWER SUPPLY)
+
+GRAPHIC CARD (video card)
+
+NVIDIA GeForce GTX 780
+
+Computer Case 
+
+NZXT PHANTON 630
+
+IFIX IT KIT 
+
+
+
+
+
+
+
+
+
