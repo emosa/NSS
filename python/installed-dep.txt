@@ -1,0 +1,125 @@
+Last login: Sun Oct 25 23:05:43 on ttys000
+You have mail.
+ELIMARIEs-MBP:~ iglitzi$ curl -O http://python-distribute.org/distribute_setup.py
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+ELIMARIEs-MBP:~ iglitzi$ python distribute_setup.py
+ELIMARIEs-MBP:~ iglitzi$ curl -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0
+ELIMARIEs-MBP:~ iglitzi$ python get-pip.py
+ELIMARIEs-MBP:~ iglitzi$ brew install git
+Error: Operation already in progress for xz
+Another active Homebrew process is already using xz.
+Please wait for it to finish or terminate it to continue.
+ELIMARIEs-MBP:~ iglitzi$ pip install virtualenv
+Could not find an activated virtualenv (required).
+ELIMARIEs-MBP:~ iglitzi$ mkdir my_project_folder
+ELIMARIEs-MBP:~ iglitzi$ cd my_project_folder
+ELIMARIEs-MBP:my_project_folder iglitzi$ virtualenv venv
+New python executable in venv/bin/python
+Installing setuptools, pip, wheel...done.
+ELIMARIEs-MBP:my_project_folder iglitzi$ virtualenv -p /usr/bin/python2.7 venv
+Running virtualenv with interpreter /usr/bin/python2.7
+Overwriting venv/lib/python2.7/orig-prefix.txt with new content
+New python executable in venv/bin/python
+Installing setuptools, pip, wheel...done.
+ELIMARIEs-MBP:my_project_folder iglitzi$ source venv/bin/activate
+(venv)ELIMARIEs-MBP:my_project_folder iglitzi$ pip install requests
+Collecting requests
+  Downloading requests-2.8.1-py2.py3-none-any.whl (497kB)
+    100% |████████████████████████████████| 499kB 980kB/s 
+Installing collected packages: requests
+Successfully installed requests-2.8.1
+(venv)ELIMARIEs-MBP:my_project_folder iglitzi$ deactivate
+ELIMARIEs-MBP:my_project_folder iglitzi$ pip freeze > requirements.txt
+Could not find an activated virtualenv (required).
+ELIMARIEs-MBP:my_project_folder iglitzi$ source venv/bin/activate
+(venv)ELIMARIEs-MBP:my_project_folder iglitzi$ pip freeze > requirements.txt
+(venv)ELIMARIEs-MBP:my_project_folder iglitzi$ $ pip install -r requirements.txt
+-bash: $: command not found
+(venv)ELIMARIEs-MBP:my_project_folder iglitzi$ pip install virtualenvwrapper
+Collecting virtualenvwrapper
+  Downloading virtualenvwrapper-4.7.1-py2.py3-none-any.whl
+Collecting virtualenv (from virtualenvwrapper)
+  Using cached virtualenv-13.1.2-py2.py3-none-any.whl
+Collecting virtualenv-clone (from virtualenvwrapper)
+  Downloading virtualenv-clone-0.2.6.tar.gz
+Collecting stevedore (from virtualenvwrapper)
+  Downloading stevedore-1.9.0-py2.py3-none-any.whl
+Collecting pbr>=1.6 (from stevedore->virtualenvwrapper)
+  Downloading pbr-1.8.1-py2.py3-none-any.whl (89kB)
+    100% |████████████████████████████████| 90kB 886kB/s 
+Collecting argparse (from stevedore->virtualenvwrapper)
+  Downloading argparse-1.4.0-py2.py3-none-any.whl
+Collecting six>=1.9.0 (from stevedore->virtualenvwrapper)
+  Downloading six-1.10.0-py2.py3-none-any.whl
+Building wheels for collected packages: virtualenv-clone
+  Running setup.py bdist_wheel for virtualenv-clone
+  Stored in directory: /Users/iglitzi/Library/Caches/pip/wheels/0b/86/b4/295afae21c0d76d0465dc41b2457424aa5b6c7a049c14df1e9
+Successfully built virtualenv-clone
+Installing collected packages: virtualenv, virtualenv-clone, pbr, argparse, six, stevedore, virtualenvwrapper
+Successfully installed argparse-1.4.0 pbr-1.8.1 six-1.10.0 stevedore-1.9.0 virtualenv-13.1.2 virtualenv-clone-0.2.6 virtualenvwrapper-4.7.1
+(venv)ELIMARIEs-MBP:my_project_folder iglitzi$ export WORKON_HOME=~/Envs
+(venv)ELIMARIEs-MBP:my_project_folder iglitzi$ source /usr/local/bin/virtualenvwrapper.sh
+-bash: /usr/local/bin/virtualenvwrapper.sh: No such file or directory
+(venv)ELIMARIEs-MBP:my_project_folder iglitzi$ source /usr/local/bin/virtualenvwrapper.sh
+-bash: /usr/local/bin/virtualenvwrapper.sh: No such file or directory
+(venv)ELIMARIEs-MBP:my_project_folder iglitzi$ pip install virtualenvwrapper-win
+Collecting virtualenvwrapper-win
+  Downloading virtualenvwrapper-win-1.2.1.zip
+Requirement already satisfied (use --upgrade to upgrade): virtualenv in ./venv/lib/python2.7/site-packages (from virtualenvwrapper-win)
+Building wheels for collected packages: virtualenvwrapper-win
+  Running setup.py bdist_wheel for virtualenvwrapper-win
+  Stored in directory: /Users/iglitzi/Library/Caches/pip/wheels/63/0e/2f/80ffbab4e1525df8fdf8f5da116ab78746ffe168b5770fd78e
+Successfully built virtualenvwrapper-win
+Installing collected packages: virtualenvwrapper-win
+Successfully installed virtualenvwrapper-win-1.2.1
+(venv)ELIMARIEs-MBP:my_project_folder iglitzi$ mkvirtualenv venv
+-bash: mkvirtualenv: command not found
+(venv)ELIMARIEs-MBP:my_project_folder iglitzi$ workon venv
+-bash: workon: command not found
+(venv)ELIMARIEs-MBP:my_project_folder iglitzi$ deactivate
+ELIMARIEs-MBP:my_project_folder iglitzi$ cd
+ELIMARIEs-MBP:~ iglitzi$ brew install autoenv
+==> Downloading https://github.com/kennethreitz/autoenv/archive/v0.1.0.tar.gz
+==> Downloading from https://codeload.github.com/kennethreitz/autoenv/tar.gz/v0.
+######################################################################## 100.0%
+==> Caveats
+To finish the installation, source activate.sh in your shell:
+  source /usr/local/opt/autoenv/activate.sh
+==> Summary
+🍺  /usr/local/Cellar/autoenv/0.1.0: 4 files, 16K, built in 2 seconds
+ELIMARIEs-MBP:~ iglitzi$ git clone git://github.com/kennethreitz/autoenv.git ~/.autoenv
+Cloning into '/Users/iglitzi/.autoenv'...
+remote: Counting objects: 278, done.
+remote: Total 278 (delta 0), reused 0 (delta 0), pack-reused 278
+Receiving objects: 100% (278/278), 39.05 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (112/112), done.
+Checking connectivity... done.
+ELIMARIEs-MBP:~ iglitzi$ echo 'source ~/.autoenv/activate.sh' >> ~/.bashrc
+ELIMARIEs-MBP:~ iglitzi$ easy_install
+error: No urls, filenames, or requirements specified (see --help)
+ELIMARIEs-MBP:~ iglitzi$ brew easy_install
+Error: Unknown command: easy_install
+ELIMARIEs-MBP:~ iglitzi$ python easy_install
+/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python: can't open file 'easy_install': [Errno 2] No such file or directory
+ELIMARIEs-MBP:~ iglitzi$ pip list
+Could not find an activated virtualenv (required).
+ELIMARIEs-MBP:~ iglitzi$ cd my_project_folder
+ELIMARIEs-MBP:my_project_folder iglitzi$ source venv/bin/activate
+(venv)ELIMARIEs-MBP:my_project_folder iglitzi$ pip list
+pbr (1.8.1)
+pip (7.1.2)
+requests (2.8.1)
+setuptools (18.2)
+six (1.10.0)
+stevedore (1.9.0)
+virtualenv (13.1.2)
+virtualenv-clone (0.2.6)
+virtualenvwrapper (4.7.1)
+virtualenvwrapper-win (1.2.1)
+wheel (0.24.0)
+(venv)ELIMARIEs-MBP:my_project_folder iglitzi$ 

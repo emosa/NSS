@@ -1,0 +1,319 @@
+Last login: Sun Oct 25 22:57:05 on ttys000
+You have mail.
+ELIMARIEs-MBP:~ iglitzi$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+It appears Homebrew is already installed. If your intent is to reinstall you
+should do the following before running this installer again:
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
+ELIMARIEs-MBP:~ iglitzi$  brew install python
+==> Installing dependencies for python: pkg-config, sqlite, gdbm, openssl
+==> Installing python dependency: pkg-config
+==> Downloading https://homebrew.bintray.com/bottles/pkg-config-0.28.el_capitan.
+######################################################################## 100.0%
+==> Pouring pkg-config-0.28.el_capitan.bottle.2.tar.gz
+🍺  /usr/local/Cellar/pkg-config/0.28: 10 files, 600K
+==> Installing python dependency: sqlite
+==> Downloading https://homebrew.bintray.com/bottles/sqlite-3.8.11.1.el_capitan.
+######################################################################## 100.0%
+==> Pouring sqlite-3.8.11.1.el_capitan.bottle.tar.gz
+==> Caveats
+This formula is keg-only, which means it was not symlinked into /usr/local.
+
+OS X provides an older sqlite3.
+
+Generally there are no consequences of this for you. If you build your
+own software and it requires this formula, you'll need to add to your
+build variables:
+
+    LDFLAGS:  -L/usr/local/opt/sqlite/lib
+    CPPFLAGS: -I/usr/local/opt/sqlite/include
+
+==> Summary
+🍺  /usr/local/Cellar/sqlite/3.8.11.1: 9 files, 2.8M
+==> Installing python dependency: gdbm
+==> Downloading https://homebrew.bintray.com/bottles/gdbm-1.11.el_capitan.bottle.2.tar.gz
+######################################################################## 100.0%
+==> Pouring gdbm-1.11.el_capitan.bottle.2.tar.gz
+🍺  /usr/local/Cellar/gdbm/1.11: 17 files, 524K
+==> Installing python dependency: openssl
+==> Downloading https://homebrew.bintray.com/bottles/openssl-1.0.2d_1.el_capitan.bottle.tar.gz
+######################################################################## 100.0%
+==> Pouring openssl-1.0.2d_1.el_capitan.bottle.tar.gz
+Error: Permission denied - /usr/local/etc
+Warning: Bottle installation failed: building from source.
+==> Installing dependencies for openssl: makedepend
+==> Installing openssl dependency: makedepend
+==> Downloading https://homebrew.bintray.com/bottles/makedepend-1.0.5.el_capitan.bottle.tar.gz
+######################################################################## 100.0%
+==> Pouring makedepend-1.0.5.el_capitan.bottle.tar.gz
+🍺  /usr/local/Cellar/makedepend/1.0.5: 7 files, 92K
+==> Downloading https://www.openssl.org/source/openssl-1.0.2d.tar.gz
+######################################################################## 100.0%
+==> perl ./Configure --prefix=/usr/local/Cellar/openssl/1.0.2d_1 --openssldir=/usr/local/etc/open
+==> make depend
+==> make
+==> make test
+==> make install MANDIR=/usr/local/Cellar/openssl/1.0.2d_1/share/man MANSUFFIX=ssl
+Last 15 lines from /Users/iglitzi/Library/Logs/Homebrew/openssl/05.make:
+SSL_want_read.3ssl => SSL_want.3ssl
+SSL_want_write.3ssl => SSL_want.3ssl
+SSL_want_x509_lookup.3ssl => SSL_want.3ssl
+installing man3/SSL_write.3ssl
+installing man3/d2i_SSL_SESSION.3ssl
+i2d_SSL_SESSION.3ssl => d2i_SSL_SESSION.3ssl
+installing man3/ssl.3ssl
+Cannot create directory /usr/local/etc: Permission denied
+created directory `/usr/local/Cellar/openssl/1.0.2d_1/bin'
+created directory `/usr/local/Cellar/openssl/1.0.2d_1/lib'
+created directory `/usr/local/Cellar/openssl/1.0.2d_1/lib/engines'
+created directory `/usr/local/Cellar/openssl/1.0.2d_1/lib/pkgconfig'
+created directory `/usr/local/Cellar/openssl/1.0.2d_1/include'
+created directory `/usr/local/Cellar/openssl/1.0.2d_1/include/openssl'
+make: *** [install_sw] Error 13
+
+READ THIS: https://git.io/brew-troubleshooting
+
+These open issues may also help:
+openssl: add 'enable-ssl-trace' option https://github.com/Homebrew/homebrew/pull/45250
+wine dependency openssl/1.0.2d https://github.com/Homebrew/homebrew/issues/43752
+openssl failed to build on 10.6.8 https://github.com/Homebrew/homebrew/issues/44280
+Warning: 
+ELIMARIEs-MBP:~ iglitzi$ brew update
+Error: The /usr/local directory is not writable.
+Even if this directory was writable when you installed Homebrew, other
+software may change permissions on this directory. Some versions of the
+"InstantOn" component of Airfoil are known to do this.
+
+You should probably change the ownership and permissions of /usr/local
+back to your user account.
+  sudo chown -R $(whoami):admin /usr/local
+ELIMARIEs-MBP:~ iglitzi$ sudo -s
+Password:
+bash-4.3# brew update
+Updated Homebrew from c09b6b0c to dddf72f6.
+==> New Formulae
+amazon-ecs-cli  dfmt            ldid            mailhog         owamp           sqliteodbc    
+chaiscript      fstar           libstatgrab     mg3a            shairport-sync  wiki          
+crystal-lang    icmake          libuecc         mstch           sift            yank          
+==> Updated Formulae
+ack                              ginac                            passenger                      
+activemq                         git                              pax-construct                  
+aircrack-ng                      git-annex                        pax-runner                     
+akka                             git-encrypt                      pdf2htmlex                     
+android-ndk                      git-flow-avh                     pegtl                          
+android-platform-tools           git-gerrit                       perl-build                     
+android-sdk                      git-open                         pgcli                          
+ansiweather                      git-plus                         pgtune                         
+ant-contrib                      git-ssh                          pidcat                         
+antigen                          git-test                         plowshare                      
+antlr                            git-town                         poppler                        
+apache-archiva                   giter8                           pow                            
+apache-drill                     glassfish                        ppss                           
+apache-opennlp                   glib                             predictionio                   
+apache-spark                     glib-networking                  prettyping                     
+app-engine-go-32                 gmail-backup                     probatron4j                    
+app-engine-java                  goffice                          procyon-decompiler             
+app-engine-python                google-sql-tool                  proguard                       
+arangodb                         gosu                             psgrep                         
+archey                           gradle                           pulledpork                     
+arm                              grails                           purescript                     
+artifactory                      grc                              putmail                        
+auto-scaling                     grib-api                         putmail-queue                  
+autoenv                          griffon                          pyenv                          
+automysqlbackup                  groovy                           pyenv-pip-migrate              
+autopsy                          groovysdk                        pygobject3                     
+avro-tools                       growly                           pyqt5                          
+aws-cfn-tools                    gsettings-desktop-schemas        q                              
+aws-cloudsearch                  gws                              qt5                            
+aws-elasticache                  gwt                              rabbitmq                       
+aws-sns-cli                      h2                               rbenv                          
+awscli                           h2o                              rbenv-aliases                  
+bagit                            hadoop                           rbenv-binstubs                 
+bar                              haproxy                          rbenv-bundle-exec              
+basex                            haskell-stack                    rbenv-bundler                  
+bash-git-prompt                  hbase                            rbenv-bundler-ruby-version     
+batik                            heroku-toolbelt                  rbenv-communal-gems            
+bee                              hg-flow                          rbenv-ctags                    
+betty                            hive                             rbenv-default-gems             
+bfg                              homebank                         rbenv-gem-rehash               
+bigdata                          hornetq                          rbenv-gemset                   
+bitrise                          hostdb                           rbenv-readline                 
+boot-clj                         hr                               rbenv-use                      
+brag                             htmlcleaner                      rbenv-vars                     
+brew-gem                         htmlcompressor                   rbenv-whatis                   
+brew-pip                         hyperspec                        rds-command-line-tools         
+briss                            idnits                           redis                          
+browser                          ievms                            redpen                         
+burl                             imgur-screenshot                 repl                           
+cadubi                           ioke                             repo                           
+cake                             ios-class-guard                  rest-shell                     
+calabash                         ios-webkit-debug-proxy           resty                          
+cask                             ip_relay                         rexster                        
+ceylon                           ipcalc                           rfcstrip                       
+cfr-decompiler                   iphotoexport                     rhino                          
+charm-tools                      ispc                             riak                           
+chcase                           ivy                              riemann                        
+checkbashisms                    jasmin                           ringojs                        
+checkstyle                       jbake                            rmate                          
+chisel                           jboss-as                         rolldice                       
+chromedriver                     jboss-forge                      rsense                         
+clearlooks-phenix                jena                             ruby-build                     
+clojurescript                    jenkins                          runcocoa                       
+cloud-watch                      jenv                             s3sync                         
+cloudbees-sdk                    jetty                            safe-rm                        
+clozure-cl                       jetty-runner                     savana                         
+clutter                          jhiccup                          saxon                          
+clutter-gtk                      jing                             saxon-b                        
+coda-cli                         jooby-bootstrap                  sbtenv                         
+colormake                        jpegrescan                       sbuild                         
+couchpotatoserver                jruby                            scalaenv                       
+cpanminus                        js-test-driver                   scalariform                    
+crash                            jsawk                            scalastyle                     
+crystax-ndk                      jsdoc-toolkit                    sec                            
+css-crush                        jsdoc3                           selecta                        
+cssembed                         jslint4java                      selenium-server-standalone     
+csshx                            jsonpp                           sendemail                      
+datomic                          jsonschema2pojo                  serveit                        
+davmail                          juju                             shpotify                       
+dcd                              jvmtop                           shunit2                        
+ddclient                         kawa                             sisc-scheme                    
+deis                             kestrel                          sjk                            
+deisctl                          kettle                           smartypants                    
+denominator                      keybase                          solr                           
+dependency-check                 keychain                         sonar                          
+dex2jar                          kotlin-compiler                  sonar-runner                   
+diff-pdf                         languagetool                     spark                          
+distribution                     launch4j                         speedtest_cli                  
+ditaa                            ldc                              sphinx                         
+djvu2pdf                         libav                            spring-loaded                  
+dockutil                         libraw                           spring-roo                     
+doitlive                         libsodium                        sqlite (installed)             
+doubledown                       libsoup                          sqlmap                         
+dpkg                             libwps                           sqoop                          
+duck                             linklint                         ssdb                           
+duply                            liquibase                        sshrc                          
+dyld-headers                     liquidprompt                     sshuttle                       
+dynamodb-local                   logstash                         sstp-client                    
+easy-git                         lorem                            stanford-parser                
+ec2-ami-tools                    lsyncd                           storm                          
+ec2-api-tools                    mackup                           stormssh                       
+ecj                              makeself                         swiftgen                       
+elasticsearch                    mariadb                          tbb                            
+elb-tools                        matlab2tikz                      terraform                      
+emscripten                       maven                            theharvester                   
+epubcheck                        maven-shell                      tmux                           
+evince                           memcache-top                     tomcat                         
+exenv                            mesos                            tomee-jax-rs                   
+fantom                           miniupnpc                        tomee-plume                    
+fasd                             mockserver                       tomee-plus                     
+ffind                            modgit                           tomee-webprofile               
+ffmbc                            modman                           trace2html                     
+ffmpeg                           mongrel2                         trafficserver                  
+fibjs                            mosquitto                        trang                          
+finatra                          mozilla-addon-sdk                ttfautohint                    
+findbugs                         mussh                            typesafe-activator             
+fleet-db                         mvnvm                            ucspi-tools                    
+flow                             mysql-search-replace             v                              
+fluent-bit                       mysqltuner                       vault                          
+flyway                           narwhal                          vault-cli                      
+fmpp                             naturaldocs                      vert.x                         
+fpp                              negfix8                          vf                             
+freetds                          neo4j                            vim                            
+frege                            nexus                            vte3                           
+funcoeszz                        nghttp2                          wildfly-as                     
+fuseki                           nicovideo-dl                     wireshark                      
+fzf                              nifi                             wrk-trello                     
+gauge                            nikto                            x264                           
+gcovr                            nodenv                           xctool                         
+gcutil                           nsd                              xmlsh                          
+gedit                            nvm                              youtube-dl                     
+geogit                           objc-run                         yuicompressor                  
+geoserver                        offline-imap                     z                              
+get-flash-videos                 openvdb                          zinc                           
+ghi                              osmosis                          zsh-completions                
+gibo                             pandoc                           zsh-history-substring-search   
+gifify                           pandoc-citeproc                  zsh-lovers                     
+gimme                            parallel                         zsh-syntax-highlighting        
+==> Deleted Formulae
+paq8px
+bash-4.3# brew install python
+Error: Cowardly refusing to `sudo brew install`
+You can use brew with sudo, but only if the brew executable is owned by root.
+However, this is both not recommended and completely unsupported so do so at
+your own risk.
+bash-4.3# sudo brew install python
+Error: Cowardly refusing to `sudo brew install`
+You can use brew with sudo, but only if the brew executable is owned by root.
+However, this is both not recommended and completely unsupported so do so at
+your own risk.
+bash-4.3# $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+bash: $: command not found
+bash-4.3# 
+bash-4.3# $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+bash: $: command not found
+bash-4.3# brew install python
+Error: Cowardly refusing to `sudo brew install`
+You can use brew with sudo, but only if the brew executable is owned by root.
+However, this is both not recommended and completely unsupported so do so at
+your own risk.
+bash-4.3# exit
+exit
+ELIMARIEs-MBP:~ iglitzi$ brew install python
+==> Installing dependencies for python: sqlite, openssl
+==> Installing python dependency: sqlite
+==> Downloading https://homebrew.bintray.com/bottles/sqlite-3.9.1.el_capitan.bottle.1.tar.gz
+######################################################################## 100.0%
+==> Pouring sqlite-3.9.1.el_capitan.bottle.1.tar.gz
+==> Caveats
+This formula is keg-only, which means it was not symlinked into /usr/local.
+
+OS X provides an older sqlite3.
+
+Generally there are no consequences of this for you. If you build your
+own software and it requires this formula, you'll need to add to your
+build variables:
+
+    LDFLAGS:  -L/usr/local/opt/sqlite/lib
+    CPPFLAGS: -I/usr/local/opt/sqlite/include
+
+==> Summary
+🍺  /usr/local/Cellar/sqlite/3.9.1: 9 files, 2.8M
+==> Installing python dependency: openssl
+==> Downloading https://homebrew.bintray.com/bottles/openssl-1.0.2d_1.el_capitan.bottle.tar.gz
+Already downloaded: /Library/Caches/Homebrew/openssl-1.0.2d_1.el_capitan.bottle.tar.gz
+==> Pouring openssl-1.0.2d_1.el_capitan.bottle.tar.gz
+Error: Permission denied - /usr/local/etc
+Warning: Bottle installation failed: building from source.
+==> Downloading https://www.openssl.org/source/openssl-1.0.2d.tar.gz
+Already downloaded: /Library/Caches/Homebrew/openssl-1.0.2d.tar.gz
+==> perl ./Configure --prefix=/usr/local/Cellar/openssl/1.0.2d_1 --openssldir=/usr/local/etc/open
+==> make depend
+==> make
+==> make test
+==> make install MANDIR=/usr/local/Cellar/openssl/1.0.2d_1/share/man MANSUFFIX=ssl
+Last 15 lines from /Users/iglitzi/Library/Logs/Homebrew/openssl/05.make:
+SSL_want_read.3ssl => SSL_want.3ssl
+SSL_want_write.3ssl => SSL_want.3ssl
+SSL_want_x509_lookup.3ssl => SSL_want.3ssl
+installing man3/SSL_write.3ssl
+installing man3/d2i_SSL_SESSION.3ssl
+i2d_SSL_SESSION.3ssl => d2i_SSL_SESSION.3ssl
+installing man3/ssl.3ssl
+Cannot create directory /usr/local/etc: Permission denied
+created directory `/usr/local/Cellar/openssl/1.0.2d_1/bin'
+created directory `/usr/local/Cellar/openssl/1.0.2d_1/lib'
+created directory `/usr/local/Cellar/openssl/1.0.2d_1/lib/engines'
+created directory `/usr/local/Cellar/openssl/1.0.2d_1/lib/pkgconfig'
+created directory `/usr/local/Cellar/openssl/1.0.2d_1/include'
+created directory `/usr/local/Cellar/openssl/1.0.2d_1/include/openssl'
+make: *** [install_sw] Error 13
+Warning: It appears you have MacPorts or Fink installed.
+Software installed with other package managers causes known problems for
+Homebrew. If a formula fails to build, uninstall MacPorts/Fink and try again.
+
+READ THIS: https://git.io/brew-troubleshooting
+
+These open issues may also help:
+openssl: add 'enable-ssl-trace' option https://github.com/Homebrew/homebrew/pull/45250
+wine dependency openssl/1.0.2d https://github.com/Homebrew/homebrew/issues/43752
+openssl failed to build on 10.6.8 https://github.com/Homebrew/homebrew/issues/44280
+ELIMARIEs-MBP:~ iglitzi$ 
