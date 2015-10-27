@@ -1,0 +1,309 @@
+Last login: Mon Oct 26 20:59:14 on ttys000
+You have mail.
+ELIMARIEs-MBP:~ iglitzi$ ssh sandbox.dev
+Welcome to Ubuntu 14.04.3 LTS (GNU/Linux 3.19.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+You have mail.
+Last login: Mon Oct 26 20:59:24 2015 from 10.0.2.2
+elimarie@sandbox:~$ apt-cache policy python-dev
+python-dev:
+  Installed: 2.7.5-5ubuntu3
+  Candidate: 2.7.5-5ubuntu3
+  Version table:
+ *** 2.7.5-5ubuntu3 0
+        500 http://us.archive.ubuntu.com/ubuntu/ trusty/main amd64 Packages
+        100 /var/lib/dpkg/status
+elimarie@sandbox:~$ apt-cache show python
+Package: python
+Priority: optional
+Section: python
+Installed-Size: 671
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: amd64
+Source: python-defaults
+Version: 2.7.5-5ubuntu3
+Replaces: python-dev (<< 2.6.5-2)
+Provides: python-ctypes, python-email, python-importlib, python-profiler, python-wsgiref
+Depends: python2.7 (>= 2.7.5-1~), python-minimal (= 2.7.5-5ubuntu3), libpython-stdlib (= 2.7.5-5ubuntu3)
+Suggests: python-doc (= 2.7.5-5ubuntu3), python-tk (>= 2.7.5-1~)
+Conflicts: python-central (<< 0.5.5)
+Breaks: python-bz2 (<< 1.1-8), python-csv (<< 1.0-4), python-email (<< 2.5.5-3), update-manager-core (<< 0.200.5-2)
+Filename: pool/main/p/python-defaults/python_2.7.5-5ubuntu3_amd64.deb
+Size: 133698
+MD5sum: e34f7f99ab4bbf8af788132f30169f65
+SHA1: 5337fb1bc17f737839115c80217cf4be4ce4f39b
+SHA256: d508f50de23b8d2dcaf5dd06b48ca284345bcd4e9cc4d1ac8ef764c0c3d95160
+Description-en: interactive high-level object-oriented language (default version)
+ Python, the high-level, interactive object oriented language,
+ includes an extensive class library with lots of goodies for
+ network programming, system administration, sounds and graphics.
+ .
+ This package is a dependency package, which depends on Debian's default
+ Python version (currently v2.7).
+Description-md5: d1ea97f755d8153fe116080f2352859b
+Multi-Arch: allowed
+Homepage: http://www.python.org/
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+Task: virt-host, ubuntu-desktop, mail-server, ubuntu-usb, print-server, dns-server, samba-server, cloud-image, server, openssh-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+elimarie@sandbox:~$ apt-cache show python-dev
+Package: python-dev
+Priority: optional
+Section: python
+Installed-Size: 45
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: amd64
+Source: python-defaults
+Version: 2.7.5-5ubuntu3
+Depends: python (= 2.7.5-5ubuntu3), libpython-dev (= 2.7.5-5ubuntu3), python2.7-dev (>= 2.7.5-1~)
+Filename: pool/main/p/python-defaults/python-dev_2.7.5-5ubuntu3_amd64.deb
+Size: 1166
+MD5sum: 0fb9dbd4067f94dc4cd894cefc50fe47
+SHA1: 13e6be388dae2131d3ac6c17242fe28f2d6b6b3d
+SHA256: 720d44efdab72371212fc4ee2f527b98dc84d80451e026942cf04eacc2cb2d98
+Description-en: header files and a static library for Python (default)
+ Header files, a static library and development tools for building
+ Python modules, extending the Python interpreter or embedding Python
+ in applications.
+ .
+ This package is a dependency package, which depends on Debian's default
+ Python version (currently v2.7).
+Description-md5: 93a1917c3f17606b40377d0b737c6c92
+Multi-Arch: allowed
+Homepage: http://www.python.org/
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+
+elimarie@sandbox:~$ sudo apt-get check
+[sudo] password for elimarie: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+elimarie@sandbox:~$ dpkg -l *python*
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name           Version      Architecture Description
++++-==============-============-============-=================================
+ii  dh-python      1.20140128-1 all          Debian helper tools for packaging
+un  gimp-python    <none>       <none>       (no description available)
+ii  libpython-dev: 2.7.5-5ubunt amd64        header files and a static library
+ii  libpython-stdl 2.7.5-5ubunt amd64        interactive high-level object-ori
+ii  libpython2.7:a 2.7.6-8ubunt amd64        Shared Python runtime library (ve
+ii  libpython2.7-d 2.7.6-8ubunt amd64        Header files and a static library
+ii  libpython2.7-m 2.7.6-8ubunt amd64        Minimal subset of the Python lang
+ii  libpython2.7-s 2.7.6-8ubunt amd64        Interactive high-level object-ori
+ii  libpython3-std 3.4.0-0ubunt amd64        interactive high-level object-ori
+ii  libpython3.4-m 3.4.3-1ubunt amd64        Minimal subset of the Python lang
+ii  libpython3.4-s 3.4.3-1ubunt amd64        Interactive high-level object-ori
+ii  python         2.7.5-5ubunt amd64        interactive high-level object-ori
+un  python-4suite  <none>       <none>       (no description available)
+un  python-all     <none>       <none>       (no description available)
+un  python-all-dbg <none>       <none>       (no description available)
+un  python-all-dev <none>       <none>       (no description available)
+ii  python-apt     0.9.3.5ubunt amd64        Python interface to libapt-pkg
+ii  python-apt-com 0.9.3.5ubunt all          Python interface to libapt-pkg (l
+un  python-apt-dbg <none>       <none>       (no description available)
+un  python-apt-doc <none>       <none>       (no description available)
+un  python-aptdaem <none>       <none>       (no description available)
+un  python-argpars <none>       <none>       (no description available)
+un  python-beaker  <none>       <none>       (no description available)
+ii  python-bottle  0.12.0-1     all          fast and simple WSGI-framework fo
+ii  python-bson    2.6.3-1build amd64        Python implementation of BSON for
+ii  python-bson-ex 2.6.3-1build amd64        C-coded extension to the python-b
+un  python-bz2     <none>       <none>       (no description available)
+ii  python-cairo   1.8.8-1ubunt amd64        Python bindings for the Cairo vec
+ii  python-catcher 0.1.7        all          Beautiful stack traces for Python
+un  python-cdd     <none>       <none>       (no description available)
+un  python-central <none>       <none>       (no description available)
+ii  python-chardet 2.0.1-2build all          universal character encoding dete
+ii  python-chardet 2.2.1-2~ubun all          universal character encoding dete
+un  python-codespe <none>       <none>       (no description available)
+ii  python-coloram 0.2.5-0.1ubu all          Cross-platform colored terminal t
+ii  python-coloram 0.2.5-0.1ubu all          Cross-platform colored terminal t
+un  python-coverag <none>       <none>       (no description available)
+ii  python-crypto  2.6.1-4build amd64        cryptographic algorithms and prot
+un  python-crypto- <none>       <none>       (no description available)
+un  python-crypto- <none>       <none>       (no description available)
+un  python-csv     <none>       <none>       (no description available)
+un  python-ctypes  <none>       <none>       (no description available)
+ii  python-daemon  1.5.5-1ubunt all          library for making a Unix daemon 
+un  python-dbg     <none>       <none>       (no description available)
+ii  python-dbus    1.2.0-2build amd64        simple interprocess messaging sys
+un  python-dbus-co <none>       <none>       (no description available)
+un  python-dbus-db <none>       <none>       (no description available)
+ii  python-dbus-de 1.2.0-2build all          main loop integration development
+un  python-dbus-do <none>       <none>       (no description available)
+un  python-deb822  <none>       <none>       (no description available)
+ii  python-debian  0.1.21+nmu2u all          Python modules to work with Debia
+ii  python-dev     2.7.5-5ubunt amd64        header files and a static library
+un  python-dev-all <none>       <none>       (no description available)
+ii  python-distlib 0.1.8-1ubunt all          low-level components of python di
+ii  python-distlib 0.1.8-1ubunt all          low-level components of python di
+un  python-distrib <none>       <none>       (no description available)
+un  python-distrib <none>       <none>       (no description available)
+un  python-doc     <none>       <none>       (no description available)
+un  python-dogtail <none>       <none>       (no description available)
+ii  python-dpkt    1.6+svn54-1  all          Python packet creation / parsing 
+un  python-email   <none>       <none>       (no description available)
+un  python-example <none>       <none>       (no description available)
+ii  python-exconso 0.1.5        all          Emergency/postmortem Python conso
+un  python-genshi  <none>       <none>       (no description available)
+ii  python-gevent  1.0-1ubuntu1 amd64        gevent is a coroutine-based Pytho
+un  python-gevent- <none>       <none>       (no description available)
+un  python-gevent- <none>       <none>       (no description available)
+ii  python-gevent- 0.3.6-1      all          SocketIO server based on the Geve
+ii  python-gevent- 0.9.3-1      all          websocket library for the gevent 
+ii  python-gi      3.12.0-1ubun amd64        Python 2.x bindings for gobject-i
+un  python-gi-cair <none>       <none>       (no description available)
+un  python-gobject <none>       <none>       (no description available)
+ii  python-gobject 2.28.6-12bui amd64        deprecated static Python bindings
+un  python-gobject <none>       <none>       (no description available)
+ii  python-greenle 0.4.2-1build amd64        Lightweight in-process concurrent
+un  python-greenle <none>       <none>       (no description available)
+un  python-greenle <none>       <none>       (no description available)
+un  python-greenle <none>       <none>       (no description available)
+ii  python-gridfs  2.6.3-1build all          Python implementation of GridFS f
+ii  python-gtk2    2.24.0-3ubun amd64        Python bindings for the GTK+ widg
+un  python-gtk2-do <none>       <none>       (no description available)
+un  python-gtkglex <none>       <none>       (no description available)
+ii  python-html5li 0.999-3~ubun all          HTML parser/tokenizer based on th
+ii  python-html5li 0.999-3~ubun all          HTML parser/tokenizer based on th
+ii  python-imaging 2.3.0-1ubunt all          Python Imaging Library compatibil
+un  python-imaging <none>       <none>       (no description available)
+un  python-importl <none>       <none>       (no description available)
+ii  python-jinja2  2.7.2-2      all          small but fast and easy to use st
+un  python-jinja2- <none>       <none>       (no description available)
+un  python-keyring <none>       <none>       (no description available)
+un  python-kinterb <none>       <none>       (no description available)
+ii  python-ldap    2.4.10-1buil amd64        LDAP interface module for Python
+un  python-ldap-do <none>       <none>       (no description available)
+ii  python-libvirt 1.2.2-0ubunt amd64        libvirt Python bindings
+ii  python-lockfil 1:0.8-2ubunt all          file locking library for Python
+ii  python-lxml    3.3.3-1ubunt amd64        pythonic binding for the libxml2 
+un  python-lxml-db <none>       <none>       (no description available)
+ii  python-magic   1:5.14-2ubun all          File type determination library u
+ii  python-mako    0.9.1-1      all          fast and lightweight templating f
+un  python-mako-do <none>       <none>       (no description available)
+ii  python-markups 0.18-1build2 amd64        HTML/XHTML/XML string library for
+ii  python-minimal 2.7.5-5ubunt amd64        minimal subset of the Python lang
+un  python-mysqldb <none>       <none>       (no description available)
+un  python-nautilu <none>       <none>       (no description available)
+ii  python-nose    1.3.1-2      all          test discovery and running of Pyt
+un  python-nose-do <none>       <none>       (no description available)
+ii  python-openpyx 1.7.0+ds1-1  all          module to read/write OpenXML xlsx
+un  python-openssl <none>       <none>       (no description available)
+un  python-parted  <none>       <none>       (no description available)
+ii  python-passlib 1.5.3-2      all          comprehensive password hashing fr
+ii  python-pefile  1.2.9.1-1.1  all          Portable Executable (PE) parsing 
+ii  python-pil     2.3.0-1ubunt amd64        Python Imaging Library (Pillow fo
+un  python-pil-dbg <none>       <none>       (no description available)
+un  python-pil-doc <none>       <none>       (no description available)
+un  python-pil.ima <none>       <none>       (no description available)
+un  python-pillow  <none>       <none>       (no description available)
+ii  python-pip     1.5.4-1ubunt all          alternative Python package instal
+ii  python-pip-whl 1.5.4-1ubunt all          alternative Python package instal
+ii  python-pkg-res 3.3-1ubuntu2 all          Package Discovery and Resource Ac
+un  python-profile <none>       <none>       (no description available)
+ii  python-psutil  1.2.1-1ubunt amd64        module providing convenience func
+un  python-psycopg <none>       <none>       (no description available)
+un  python-pyasn1  <none>       <none>       (no description available)
+un  python-pybabel <none>       <none>       (no description available)
+un  python-pygment <none>       <none>       (no description available)
+un  python-pylons  <none>       <none>       (no description available)
+ii  python-pymongo 2.6.3-1build amd64        Python interface to the MongoDB d
+ii  python-pymongo 2.6.3-1build amd64        C-coded extension to the python-p
+un  python-pymssql <none>       <none>       (no description available)
+un  python-qt4-dbu <none>       <none>       (no description available)
+ii  python-reconfi 0.1.72       all          Simple config file management lib
+ii  python-request 2.2.1-1ubunt all          elegant and simple HTTP library f
+ii  python-request 2.2.1-1ubunt all          elegant and simple HTTP library f
+ii  python-setupto 3.3-1ubuntu2 all          Python Distutils Enhancements
+ii  python-setupto 3.3-1ubuntu2 all          Python Distutils Enhancements (wh
+ii  python-six     1.5.2-1ubunt all          Python 2 and 3 compatibility libr
+ii  python-six-whl 1.5.2-1ubunt all          Python 2 and 3 compatibility libr
+un  python-softwar <none>       <none>       (no description available)
+ii  python-sqlalch 0.8.4-1build all          SQL toolkit and Object Relational
+un  python-sqlalch <none>       <none>       (no description available)
+ii  python-sqlalch 0.8.4-1build amd64        SQL toolkit and Object Relational
+ii  python-support 1.0.15       all          automated rebuilding support for 
+un  python-tk      <none>       <none>       (no description available)
+un  python-turboge <none>       <none>       (no description available)
+ii  python-urllib3 1.7.1-1ubunt all          HTTP library with thread-safe con
+ii  python-urllib3 1.7.1-1ubunt all          HTTP library with thread-safe con
+un  python-virtual <none>       <none>       (no description available)
+un  python-vte     <none>       <none>       (no description available)
+ii  python-wheel   0.24.0-1~ubu all          built-package format for Python
+un  python-wsgiref <none>       <none>       (no description available)
+ii  python-xapian  1.2.16-2ubun amd64        Xapian search engine interface fo
+un  python-xdg     <none>       <none>       (no description available)
+ii  python-yara    2.0.0-2      amd64        help to identify and classify mal
+un  python2.3-ldap <none>       <none>       (no description available)
+un  python2.3-ldap <none>       <none>       (no description available)
+un  python2.4-dbus <none>       <none>       (no description available)
+un  python2.4-ldap <none>       <none>       (no description available)
+un  python2.5-mini <none>       <none>       (no description available)
+un  python2.6      <none>       <none>       (no description available)
+un  python2.6-mini <none>       <none>       (no description available)
+ii  python2.7      2.7.6-8ubunt amd64        Interactive high-level object-ori
+un  python2.7-apt  <none>       <none>       (no description available)
+un  python2.7-argp <none>       <none>       (no description available)
+un  python2.7-bott <none>       <none>       (no description available)
+un  python2.7-bson <none>       <none>       (no description available)
+un  python2.7-bson <none>       <none>       (no description available)
+un  python2.7-cair <none>       <none>       (no description available)
+un  python2.7-cele <none>       <none>       (no description available)
+un  python2.7-cjkc <none>       <none>       (no description available)
+un  python2.7-cryp <none>       <none>       (no description available)
+un  python2.7-ctyp <none>       <none>       (no description available)
+un  python2.7-dbus <none>       <none>       (no description available)
+ii  python2.7-dev  2.7.6-8ubunt amd64        Header files and a static library
+un  python2.7-doc  <none>       <none>       (no description available)
+un  python2.7-elem <none>       <none>       (no description available)
+un  python2.7-gi   <none>       <none>       (no description available)
+un  python2.7-gobj <none>       <none>       (no description available)
+un  python2.7-gobj <none>       <none>       (no description available)
+un  python2.7-grid <none>       <none>       (no description available)
+un  python2.7-ldap <none>       <none>       (no description available)
+un  python2.7-lxml <none>       <none>       (no description available)
+un  python2.7-magi <none>       <none>       (no description available)
+un  python2.7-mark <none>       <none>       (no description available)
+ii  python2.7-mini 2.7.6-8ubunt amd64        Minimal subset of the Python lang
+un  python2.7-pil  <none>       <none>       (no description available)
+un  python2.7-prof <none>       <none>       (no description available)
+un  python2.7-pymo <none>       <none>       (no description available)
+un  python2.7-pymo <none>       <none>       (no description available)
+un  python2.7-setu <none>       <none>       (no description available)
+un  python2.7-sqla <none>       <none>       (no description available)
+un  python2.7-wsgi <none>       <none>       (no description available)
+un  python2.7-xapi <none>       <none>       (no description available)
+ii  python3        3.4.0-0ubunt amd64        interactive high-level object-ori
+un  python3-all    <none>       <none>       (no description available)
+un  python3-all-db <none>       <none>       (no description available)
+un  python3-all-de <none>       <none>       (no description available)
+ii  python3-apt    0.9.3.5ubunt amd64        Python 3 interface to libapt-pkg
+un  python3-apt-db <none>       <none>       (no description available)
+un  python3-dbg    <none>       <none>       (no description available)
+un  python3-dev    <none>       <none>       (no description available)
+un  python3-doc    <none>       <none>       (no description available)
+un  python3-exampl <none>       <none>       (no description available)
+ii  python3-minima 3.4.0-0ubunt amd64        minimal subset of the Python lang
+ii  python3-pkg-re 3.3-1ubuntu2 all          Package Discovery and Resource Ac
+un  python3-profil <none>       <none>       (no description available)
+un  python3-setupt <none>       <none>       (no description available)
+un  python3-tk     <none>       <none>       (no description available)
+un  python3.1      <none>       <none>       (no description available)
+un  python3.1-mini <none>       <none>       (no description available)
+ii  python3.4      3.4.3-1ubunt amd64        Interactive high-level object-ori
+un  python3.4-apt  <none>       <none>       (no description available)
+un  python3.4-doc  <none>       <none>       (no description available)
+ii  python3.4-mini 3.4.3-1ubunt amd64        Minimal subset of the Python lang
+un  python3.4-setu <none>       <none>       (no description available)
+un  python3.4-venv <none>       <none>       (no description available)
+elimarie@sandbox:~$ 
