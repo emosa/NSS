@@ -1,0 +1,39 @@
+Last login: Mon Oct 26 21:13:33 on ttys000
+You have mail.
+ELIMARIEs-MBP:~ iglitzi$ ssh sandbox.dev
+Welcome to Ubuntu 14.04.3 LTS (GNU/Linux 3.19.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+You have mail.
+Last login: Mon Oct 26 21:13:42 2015 from 10.0.2.2
+elimarie@sandbox:~$ sudo easy_install -U pytest
+[sudo] password for elimarie: 
+Searching for pytest
+Reading https://pypi.python.org/simple/pytest/
+Best match: pytest 2.8.2
+Downloading https://pypi.python.org/packages/source/p/pytest/pytest-2.8.2.tar.gz#md5=96e77b3a2fb40e5d99a1cfba38ac7c6d
+Processing pytest-2.8.2.tar.gz
+Writing /tmp/easy_install-_pke49/pytest-2.8.2/setup.cfg
+Running pytest-2.8.2/setup.py -q bdist_egg --dist-dir /tmp/easy_install-_pke49/pytest-2.8.2/egg-dist-tmp-MSRg0C
+Adding pytest 2.8.2 to easy-install.pth file
+Installing py.test script to /usr/local/bin
+Installing py.test-2.7 script to /usr/local/bin
+
+Installed /usr/local/lib/python2.7/dist-packages/pytest-2.8.2-py2.7.egg
+Processing dependencies for pytest
+Searching for py>=1.4.29
+Reading https://pypi.python.org/simple/py/
+Best match: py 1.4.30
+Downloading https://pypi.python.org/packages/source/p/py/py-1.4.30.tar.gz#md5=a904aabfe4765cb754f2db84ec7bb03a
+Processing py-1.4.30.tar.gz
+Writing /tmp/easy_install-Y5SSEj/py-1.4.30/setup.cfg
+Running py-1.4.30/setup.py -q bdist_egg --dist-dir /tmp/easy_install-Y5SSEj/py-1.4.30/egg-dist-tmp-sfCgkP
+Adding py 1.4.30 to easy-install.pth file
+
+Installed /usr/local/lib/python2.7/dist-packages/py-1.4.30-py2.7.egg
+Finished processing dependencies for pytest
+elimarie@sandbox:~$ sudo py.test --version
+This is pytest version 2.8.2, imported from /usr/local/lib/python2.7/dist-packages/pytest-2.8.2-py2.7.egg/pytest.pyc
+elimarie@sandbox:~$ 
+
+
