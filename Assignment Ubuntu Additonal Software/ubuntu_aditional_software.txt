@@ -1,0 +1,36 @@
+Last login: Mon Oct 26 20:30:12 on ttys000
+You have mail.
+ELIMARIEs-MBP:~ iglitzi$ ssh sandbox.dev
+Welcome to Ubuntu 14.04.3 LTS (GNU/Linux 3.19.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+You have mail.
+Last login: Sun Oct 25 22:08:45 2015
+elimarie@sandbox:~$ ls -l
+total 13004
+drwxrwxrwx 12 elimarie elimarie    4096 Feb 19  2009 bash-4.0
+-rwxrwxrwx  1 elimarie elimarie 6230779 Feb 20  2009 bash-4.0.tar.gz
+drwxrwxrwx 12 elimarie elimarie    4096 Dec 30  2009 bash-4.1
+-rwxrwxrwx  1 elimarie elimarie 6598300 Dec 31  2009 bash-4.1.tar.gz
+drwxrwxr-x  7 elimarie elimarie    4096 Oct 18 22:03 bin
+-rwxrwxrwx  1 elimarie elimarie     123 Oct  4 23:10 composer.json
+-rwxrwxrwx  1 elimarie elimarie   29259 Oct  4 23:10 composer.lock
+drwxrwxr-x  3 elimarie elimarie    4096 Oct 25 22:02 cron
+drwxrwxrwx  9 elimarie elimarie    4096 Aug 19 17:36 drupal-7.39
+-rw-rw-r--  1 elimarie elimarie       0 Oct 19 22:22 error.log
+drwxrwxr-x  6 elimarie elimarie    4096 Oct 18 22:01 gitolite
+drwxrwxrwx  5 elimarie elimarie    4096 Oct 18 21:05 gitolite-admin
+-rw-r--r--  1 root     root         141 Oct 19 23:35 gitweb.conf
+drwxrwxrwx  5 elimarie elimarie    4096 Oct  4 09:54 homebrew
+drwxrwxrwx  7 elimarie elimarie    4096 Oct  4 22:15 my_project_name
+drwxrwxrwx  7 elimarie elimarie    4096 Oct  4 22:43 path
+drwxrwxr-x  4 elimarie elimarie    4096 Oct 19 22:48 ssdeep-2.12
+-rw-rw-r--  1 elimarie elimarie  375241 Oct 24  2014 ssdeep.tar.gz
+drwxrwxr-x  2 elimarie elimarie    4096 Oct 25 20:53 thisCron
+-rw-r--r--  1 root     root         595 Oct 19 23:32 vboxsf.conf
+drwxrwxrwx 11 elimarie elimarie    4096 Oct  4 23:10 vendor
+drwxrwxrwx  2 elimarie elimarie    4096 Jun  7  2012 vmware802fixlinux320
+-rwxrwxrwx  1 elimarie elimarie    2072 Jun  7  2012 vmware802fixlinux320.tar.gz
+elimarie@sandbox:~$ 
+
+
